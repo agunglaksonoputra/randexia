@@ -29,7 +29,7 @@ export default function HomePage() {
 
   return (
     <MainLayout onNavigate={handleNavigate}>
-      <HeroSection ref={homeRef} />
+      <HeroSection ref={homeRef} onNavigate={handleNavigate} />
       <ToolsSection ref={toolsRef} />
       <FeaturesSection ref={aboutRef} />
     </MainLayout>

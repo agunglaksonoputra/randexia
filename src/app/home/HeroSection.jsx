@@ -2,8 +2,10 @@
 
 import { Clock, ArrowRight, Github } from "lucide-react";
 import { useCurrentTime } from "@hooks/useCurrentTime";
+import { forwardRef } from "react";
 
-export default function HeroSection({ ref, className }) {
+const HeroSection = forwardRef(function HeroSection(props, ref) {
+  const { className, onNavigate } = props;
   const currentTime = useCurrentTime();
 
   return (
@@ -23,10 +25,15 @@ export default function HeroSection({ ref, className }) {
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">A collection of powerful utility generators. Generate timestamps, random numbers, UUIDs, and more.</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <a href="#tools" className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center space-x-2">
+            {/* <a href="#tools" className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center space-x-2">
               <span>Explore Tools</span>
               <ArrowRight className="w-5 h-5" />
-            </a>
+            </a> */}
+            {/* <button onClick={() => onNavigate("tools")}> */}
+            <button onClick={() => onNavigate("tools")} className="nav-btn px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/50 transition-all flex items-center space-x-2 cursor-pointer">
+              <span>Explore Tools</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white border-2 border-slate-300 text-slate-700 rounded-lg font-semibold hover:bg-slate-50 transition-all flex items-center space-x-2">
               <Github className="w-5 h-5" />
               <span>View on GitHub</span>
@@ -36,4 +43,6 @@ export default function HeroSection({ ref, className }) {
       </div>
     </section>
   );
-}
+});
+
+export default HeroSection;

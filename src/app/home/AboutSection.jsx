@@ -1,8 +1,11 @@
 "use client";
 
 import { Clock, Hash, Shuffle } from "lucide-react";
+import { forwardRef } from "react";
 
-export default function FeaturesSection({ ref, className }) {
+const FeaturesSection = forwardRef(function HeroSection(props, ref) {
+  const { className } = props;
+
   return (
     <section id="about" ref={ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 rounded-2xl p-8 sm:p-12">
@@ -34,4 +37,6 @@ export default function FeaturesSection({ ref, className }) {
       </div>
     </section>
   );
-}
+});
+
+export default FeaturesSection;

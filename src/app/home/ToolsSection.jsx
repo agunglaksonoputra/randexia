@@ -1,7 +1,10 @@
 import ToolCard from "@components/ui/ToolCard";
-import { tools } from "@components/home/ToolsData";
+import { tools } from "@constants/ToolsData";
+import { forwardRef } from "react";
 
-export default function ToolsSection({ ref, className }) {
+const ToolsSection = forwardRef(function ToolsSection(props, ref) {
+  const { className } = props;
+
   return (
     <section id="tools" ref={ref} className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 ${className}`}>
       <div className="text-center mb-12">
@@ -16,4 +19,6 @@ export default function ToolsSection({ ref, className }) {
       </div>
     </section>
   );
-}
+});
+
+export default ToolsSection;

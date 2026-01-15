@@ -7,7 +7,7 @@ export const tools = [
     description: "Generate timestamps, timezones, and time-based utilities",
     status: "Available",
     color: "from-blue-500 to-cyan-500",
-    link: "/tools/time",
+    link: "/time-generator",
   },
   {
     icon: Hash,

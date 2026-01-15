@@ -14,7 +14,8 @@
       "@components/*": ["src/components/*"],
       "@app/*": ["src/app/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@constants/*": ["src/constants/*"]
     }
   }
 }

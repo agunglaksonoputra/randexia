@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Shuffle, Github, Menu, X } from "lucide-react";
 
-export default function Navbar({ onNavigate }) {
+export default function MainNavbar({ onNavigate }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleNav = (section) => {
