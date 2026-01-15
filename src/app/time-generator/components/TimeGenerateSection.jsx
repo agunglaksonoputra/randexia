@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy, Play, RefreshCw, Zap } from "lucide-react";
+import { ChevronDown, Copy, Play, RefreshCw, Zap } from "lucide-react";
 import { useState } from "react";
 import { randomTimeBetween } from "../lib/randomTimeBetween";
 import { intervalTimeBetween } from "../lib/intervalTimeBetween";
@@ -82,10 +82,16 @@ export default function TimeGeneratorSection() {
       {/* Generation Mode */}
       <div className="mb-6">
         <label className="block text-sm font-medium text-slate-700 mb-2">Generation Mode</label>
-        <select value={mode} onChange={(e) => setMode(e.target.value)} className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none text-slate-900">
-          <option value="random">Random Times</option>
-          <option value="interval">Fixed Interval</option>
-        </select>
+
+        <div className="relative">
+          <select value={mode} onChange={(e) => setMode(e.target.value)} className="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none text-slate-900 appearance-none cursor-pointer">
+            <option value="random">Random Times</option>
+            <option value="interval">Fixed Interval</option>
+          </select>
+
+          {/* Chevron Icon */}
+          <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
+        </div>
 
         <p className="text-xs text-slate-500 mt-1">Choose between random or interval-based generation</p>
       </div>
