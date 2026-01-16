@@ -15,7 +15,8 @@ const HeroSection = forwardRef(function HeroSection(props, ref) {
         <div className="text-center space-y-6">
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white border border-blue-200 rounded-full text-sm shadow-sm">
             <Clock className="w-4 h-4 text-blue-600" />
-            <span className="text-blue-600 font-medium">{currentTime}</span>
+            {/* <span className="text-blue-600 font-medium">{currentTime}</span> */}
+            {currentTime && <span className="text-blue-600 font-medium">{currentTime}</span>}
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-slate-900">Randexia</h1>

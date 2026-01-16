@@ -9,12 +9,16 @@ function formatTime(date) {
 }
 
 export function useCurrentTime() {
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
+  const [time, setTime] = useState(null); // ⬅️ PENTING
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const update = () => {
       setTime(formatTime(new Date()));
-    }, 1000);
+    };
+
+    update(); // set pertama kali setelah mount
+    const timer = setInterval(update, 1000);
+
     return () => clearInterval(timer);
   }, []);
 
