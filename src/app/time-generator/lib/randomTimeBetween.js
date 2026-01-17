@@ -1,3 +1,5 @@
+import { formatDateTime, formatTimeOnly, formatUnixTimestamp } from "@/lib/timeFormatter";
+
 function buildDateRange(startTime, endTime) {
   const now = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -44,8 +46,8 @@ export function randomTimeBetween({ startTime, endTime, count = 5 }) {
   results.sort((a, b) => a - b);
 
   return {
-    generatedAt: now.toISOString().replace("T", " ").slice(0, 19),
-    timestampNow: Math.floor(now.getTime() / 1000),
+    generatedAt: formatDateTime(now),
+    timestampNow: formatUnixTimestamp(now),
     results,
   };
 }
