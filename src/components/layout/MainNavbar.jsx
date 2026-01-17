@@ -41,9 +41,12 @@ export default function MainNavbar({ onNavigate }) {
             <button onClick={() => handleNav("about")} className="nav-btn text-slate-700 hover:text-blue-600 transition-colors font-medium cursor-pointer">
               About
             </button>
-            <button onClick={() => handleNav("source")} className="nav-btn text-slate-700 hover:text-blue-600 transition-colors cursor-pointer">
+            <a href="https://github.com/agunglaksonoputra/randexia.git" target="_blank" rel="noopener noreferrer" className="text-slate-700 hover:text-blue-600 transition-colors">
               <Github className="w-5 h-5" />
-            </button>
+            </a>
+            {/* <button onClick={() => handleNav("source")} className="nav-btn text-slate-700 hover:text-blue-600 transition-colors cursor-pointer">
+              <Github className="w-5 h-5" />
+            </button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -55,13 +58,24 @@ export default function MainNavbar({ onNavigate }) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <button onClick={() => handleNav("home")}>Home</button>
-          <button onClick={() => handleNav("tools")}>Tools</button>
-          <button onClick={() => handleNav("about")}>About</button>
-          <button onClick={() => handleNav("source")}>
-            <Github className="w-5 h-5" />
-          </button>
+        <div className="md:hidden bg-white border-t  border-slate-200 bg-white">
+          <div className="px-4 py-4 space-y-3 flex flex-col justify-between items-start">
+            <button onClick={() => handleNav("home")} className="text-slate-700 hover:text-blue-600 transition-colors font-medium">
+              Home
+            </button>
+            <button onClick={() => handleNav("tools")} className="text-slate-700 hover:text-blue-600 transition-colors font-medium">
+              Tools
+            </button>
+            <button onClick={() => handleNav("about")} className="text-slate-700 hover:text-blue-600 transition-colors font-medium">
+              About
+            </button>
+            <a href="https://github.com/agunglaksonoputra/randexia.git" target="_blank" rel="noopener noreferrer" className="text-slate-700 hover:text-blue-600 transition-colors font-medium">
+              <Github className="w-5 h-5" />
+            </a>
+            {/* <button onClick={() => handleNav("source")}>
+              <Github className="w-5 h-5" />
+            </button> */}
+          </div>
         </div>
       )}
     </nav>

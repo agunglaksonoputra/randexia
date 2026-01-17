@@ -5,11 +5,8 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <span className="text-slate-600">© 2025 Randexia. Built with Next.js</span>
           <div className="flex items-center space-x-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">
+            <a href="https://github.com/agunglaksonoputra/randexia.git" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">
               GitHub
-            </a>
-            <a href="#" className="text-slate-600 hover:text-slate-900 transition-colors font-medium">
-              Documentation
             </a>
           </div>
         </div>

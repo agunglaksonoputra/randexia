@@ -20,7 +20,7 @@ export default function FeatureNavbar({ title, icon: Icon = Clock }) {
             <Home className="w-4 h-4" />
             <span className="hidden sm:inline">Back to Home</span>
           </a> */}
-          <Link href="/" className="flex items-center space-x-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-all">
+          <Link href="/" className="flex items-center sm:space-x-2 px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg font-medium hover:bg-slate-50 transition-all">
             <Home className="w-4 h-4" />
             <span className="hidden sm:inline">Back to Home</span>
           </Link>

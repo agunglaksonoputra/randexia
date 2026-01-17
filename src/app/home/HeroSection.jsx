@@ -35,7 +35,11 @@ const HeroSection = forwardRef(function HeroSection(props, ref) {
               <span>Explore Tools</span>
               <ArrowRight className="w-5 h-5" />
             </button>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white border-2 border-slate-300 text-slate-700 rounded-lg font-semibold hover:bg-slate-50 transition-all flex items-center space-x-2">
+            {/* <button onClick={() => onNavigate("tools")} className="nav-btn px-8 py-3 bg-white border-2 border-slate-300 text-slate-700 rounded-lg font-semibold hover:bg-slate-50 transition-all flex items-center space-x-2 cursor-pointer">
+              <Github className="w-5 h-5" />
+              <span>View on GitHub</span>
+            </button> */}
+            <a href="https://github.com/agunglaksonoputra/randexia.git" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-white border-2 border-slate-300 text-slate-700 rounded-lg font-semibold hover:bg-slate-50 transition-all flex items-center space-x-2">
               <Github className="w-5 h-5" />
               <span>View on GitHub</span>
             </a>
